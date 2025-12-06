@@ -64,5 +64,8 @@ Get-Content request.json | .\grpcurl -plaintext -proto protos/model.proto --impo
 
 
 ![docker-ps-up](screenshots/docker-ps-up.png)
+
 ![grpcurl-health-output](screenshots/grpcurl-health-output.png)
+
 ![grpcurl-predict-output](screenshots/grpcurl-predict-output.png)
+
