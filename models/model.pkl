@@ -1,0 +1,24 @@
+# Создайте и сохраните этот файл, затем запустите его.
+import pickle
+from sklearn.linear_model import LogisticRegression
+from sklearn.datasets import load_iris
+import numpy as np
+import os
+
+# Создание и обучение очень простой модели
+X, y = load_iris(return_X_y=True)
+# Упростим до бинарной классификации
+X_binary = X[y < 2]
+y_binary = y[y < 2]
+model = LogisticRegression(max_iter=200)
+model.fit(X_binary, y_binary)
+
+# Сохранение модели
+model_dir = 'models'
+os.makedirs(model_dir, exist_ok=True)
+model_path = os.path.join(model_dir, 'model.pkl')
+
+with open(model_path, 'wb') as f:
+    pickle.dump(model, f)
+
+print(f"Модель сохранена в {model_path}")

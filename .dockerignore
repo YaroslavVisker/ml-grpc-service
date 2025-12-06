@@ -1,0 +1,20 @@
+# Python temp files
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.venv
+
+# VS Code
+.vscode/
+
+# Git
+.git
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Generated gRPC code (исключаем только сгенерированные файлы, если они есть локально)
+server/model_pb2.py
+server/model_pb2_grpc.py

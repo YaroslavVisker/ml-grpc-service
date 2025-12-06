@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+// Определяем пакет для предотвращения коллизий имен.
+// Это будет префиксом для сгенерированных классов (например, mlservice.v1.PredictionService)
+package mlservice.v1;
+
+// --- 1. Определение Сервиса (Service) ---
+// Сервис для получения предсказаний и проверки состояния
+service PredictionService {
+  // 1.1 Метод Health: Проверка состояния сервиса и версии модели.
+  // Принимает HealthRequest и возвращает HealthResponse.
+  rpc Health(HealthRequest) returns (HealthResponse);
+
+  // 1.2 Метод Predict: Получение предсказания от ML-модели.
+  // Принимает PredictRequest (входные признаки) и возвращает PredictResponse.
+  rpc Predict(PredictRequest) returns (PredictResponse);
+}
+
+// --- 2. Определение Сообщений (Messages) для Health ---
+
+// Запрос для метода Health (пустой, так как не требует данных)
+message HealthRequest {}
+
+// Ответ для метода Health
+message HealthResponse {
+  // Статус работы сервиса (например, "ok", "error", "degraded")
+  string status = 1;         
+  // Версия модели, которую загрузил сервис (например, "v1.0.0")
+  string model_version = 2;  
+}
+
+// --- 3. Определение Сообщений (Messages) для Predict ---
+
+// Запрос для метода Predict
+message PredictRequest {
+  // Входные данные для модели. 
+  // 'repeated double' означает, что это список чисел с плавающей точкой (например, вектор признаков).
+  repeated double features = 1;
+}
+
+// Ответ для метода Predict
+message PredictResponse {
+  // Предсказанная метка или значение (например, "1", "cat", или число в виде строки)
+  string prediction = 1;    
+  // Вероятность или достоверность предсказания (confidence score)
+  double confidence = 2;    
+  // Версия модели, использованной для данного предсказания
+  string model_version = 3; 
+}
