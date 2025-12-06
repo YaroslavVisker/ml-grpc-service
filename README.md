@@ -63,9 +63,6 @@ Get-Content request.json | .\grpcurl -plaintext -proto protos/model.proto --impo
 }
 
 
-<img width="1872" height="976" alt="Снимок экрана 2025-12-06 222011" src="https://github.com/user-attachments/assets/9a4a45f2-a524-466c-920d-bdcf3034ae98" />
-<img width="1919" height="997" alt="Снимок экрана 2025-12-06 222137" src="https://github.com/user-attachments/assets/ad44d0ab-1b96-436f-8672-60f8f4cb8fa0" />
-<img width="1919" height="978" alt="Снимок экрана 2025-12-06 222232" src="https://github.com/user-attachments/assets/aafbb932-63c7-4140-9e13-9fd6fb7a5270" />
-
-
-
+!([путь_к_файлу](screenshots/Снимок экрана 2025-12-06 222011.png.png))
+!([путь_к_файлу](screenshots/Снимок экрана 2025-12-06 222137.png))
+!([путь_к_файлу](screenshots/Снимок экрана 2025-12-06 222232.png))
