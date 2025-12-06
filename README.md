@@ -20,7 +20,7 @@
 
 Команда собирает Docker-образ с именем `grpc-ml-service` на основе инструкций в `Dockerfile`.
 
-```bash
+
 docker build -t grpc-ml-service .
 
 2. Запуск Docker-контейнера
