@@ -63,6 +63,6 @@ Get-Content request.json | .\grpcurl -plaintext -proto protos/model.proto --impo
 }
 
 
-!([путь_к_файлу](screenshots/Снимок экрана 2025-12-06 222011.png.png))
+!([путь_к_файлу](screenshots/Снимок экрана 2025-12-06 222011.png))
 !([путь_к_файлу](screenshots/Снимок экрана 2025-12-06 222137.png))
 !([путь_к_файлу](screenshots/Снимок экрана 2025-12-06 222232.png))
