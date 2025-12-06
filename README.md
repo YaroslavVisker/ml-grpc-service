@@ -62,10 +62,12 @@ Get-Content request.json | .\grpcurl -plaintext -proto protos/model.proto --impo
   "modelVersion": "v1.0.0"
 }
 
-
+### 1. Проверка статуса контейнера
 ![docker-ps-up](screenshots/docker-ps-up.png)
 
+### 2. Вызов метода /Health
 ![grpcurl-health-output](screenshots/grpcurl-health-output.png)
 
+### 3. Вызов метода /Predict
 ![grpcurl-predict-output](screenshots/grpcurl-predict-output.png)
 
